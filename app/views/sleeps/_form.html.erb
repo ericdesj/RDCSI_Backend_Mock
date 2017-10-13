@@ -1,0 +1,37 @@
+<%= form_with(model: sleep, local: true) do |form| %>
+  <% if sleep.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sleep.errors.count, "error") %> prohibited this sleep from being saved:</h2>
+
+      <ul>
+      <% sleep.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration, id: :sleep_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quality %>
+    <%= form.number_field :quality, id: :sleep_quality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :times_awake %>
+    <%= form.number_field :times_awake, id: :sleep_times_awake %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :sleep_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

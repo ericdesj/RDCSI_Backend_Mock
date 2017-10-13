@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Meal name:</strong>
+  <%= @nutrition.meal_name %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @nutrition.quality %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @nutrition.user %>
+</p>
+
+<%= link_to 'Edit', edit_nutrition_path(@nutrition) %> |
+<%= link_to 'Back', nutritions_path %>
