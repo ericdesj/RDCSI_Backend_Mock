@@ -17,7 +17,7 @@
       <tr>
         <td><%= nutrition.meal_name %></td>
         <td><%= nutrition.quality %></td>
-        <td><%= nutrition.user %></td>
+        <td><%= nutrition.user.id %></td>
         <td><%= link_to 'Show', nutrition %></td>
         <td><%= link_to 'Edit', edit_nutrition_path(nutrition) %></td>
         <td><%= link_to 'Destroy', nutrition, method: :delete, data: { confirm: 'Are you sure?' } %></td>

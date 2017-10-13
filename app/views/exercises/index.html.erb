@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Name</th>
       <th>Duration</th>
       <th>Intensity</th>
       <th>User</th>
@@ -16,10 +16,10 @@
   <tbody>
     <% @exercises.each do |exercise| %>
       <tr>
-        <td><%= exercise.type %></td>
+        <td><%= exercise.name %></td>
         <td><%= exercise.duration %></td>
         <td><%= exercise.intensity %></td>
-        <td><%= exercise.user %></td>
+        <td><%= exercise.user.id %></td>
         <td><%= link_to 'Show', exercise %></td>
         <td><%= link_to 'Edit', edit_exercise_path(exercise) %></td>
         <td><%= link_to 'Destroy', exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
